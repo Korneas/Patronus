@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "780251594036",
+    "firebase_url": "https://patronus-safe.firebaseio.com",
+    "project_id": "patronus-safe",
+    "storage_bucket": "patronus-safe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780251594036:android:bff91311af33bca0",
+        "android_client_info": {
+          "package_name": "com.example.camilomontoya.patronus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780251594036-f7pfsvrhg81qthdlpufv6q7chmddddde.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.camilomontoya.patronus",
+            "certificate_hash": "cc08739a2e44daa3ab3c0ab9b7d083d3ece8eb7a"
+          }
+        },
+        {
+          "client_id": "780251594036-c6t1m6tdeonk3vpr68il3vrafgl8u4lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1PobmnrDg0HmmY39JEye_wcv5vqLwMao"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780251594036-c6t1m6tdeonk3vpr68il3vrafgl8u4lb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
