@@ -1,4 +1,4 @@
-package com.example.camilomontoya.patronus;
+package com.example.camilomontoya.patronus.Utils;
 
 import android.graphics.Typeface;
 

@@ -5,119 +5,403 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="vertical"
+    android:background="@drawable/bg_2"
     tools:context="com.example.camilomontoya.patronus.RegisterActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorPrimaryDarkPatronus"
-        android:text="registrarse"
-        android:textColor="#fff"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_confirm_reg" />
+        <TextView
+            android:id="@+id/title_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Registro"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/email_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="Correo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/residence_reg" />
+        <ImageButton
+            android:id="@+id/back_reg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/title_reg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_reg"
+            app:srcCompat="@drawable/ic_arrow_left" />
 
-    <EditText
-        android:id="@+id/pass_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Contraseña"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_reg" />
+        <ImageView
+            android:id="@+id/logo_reg"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/patrnous_complete"
+            app:layout_constraintTop_toBottomOf="@+id/title_reg" />
 
-    <EditText
-        android:id="@+id/pass_confirm_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Confirmar contraseña"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_reg" />
+        <TextView
+            android:id="@+id/profile_pic_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Agrega una foto de perfil"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_reg"
+            app:layout_constraintHorizontal_bias="0.5" />
 
-    <EditText
-        android:id="@+id/name_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Nombre"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+        <ImageButton
+            android:id="@+id/profile_pic_reg"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00000000"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic_txt"
+            app:srcCompat="@drawable/add_image_btn" />
 
-    <EditText
-        android:id="@+id/residence_reg"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Barrio"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_reg" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic_reg"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#fff"
+            android:id="@+id/input_name_reg">
 
-    <ImageButton
-        android:id="@+id/profile_pic"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#00000000"
-        android:scaleType="centerCrop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/patrnous_logo" />
+            <EditText
+                android:id="@+id/name_reg"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:singleLine="true"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="45dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/input_name_reg"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#fff"
+            android:id="@+id/input_residence_reg">
+
+            <EditText
+                android:id="@+id/residence_reg"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Barrio"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:singleLine="true"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="45dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/input_residence_reg"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#fff"
+            android:id="@+id/input_email_reg">
+
+            <EditText
+                android:id="@+id/email_reg"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:singleLine="true"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="45dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/input_email_reg"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#fff"
+            android:id="@+id/input_pass_reg">
+
+            <EditText
+                android:id="@+id/pass_reg"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:singleLine="true"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="45dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/input_pass_reg"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#fff"
+            android:id="@+id/input_passconfirm_reg">
+
+            <EditText
+                android:id="@+id/passconfirm_reg"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:hint="Confirmar contraseña"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="45dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/distance_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Distancia promedio que recorres:"
+            android:textColor="@color/colorPrimaryPatrnous"
+            app:layout_constraintRight_toRightOf="@+id/input_passconfirm_reg"
+            app:layout_constraintTop_toBottomOf="@+id/input_passconfirm_reg"
+            app:layout_constraintLeft_toLeftOf="@+id/input_passconfirm_reg"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginLeft="8dp" />
+
+        <SeekBar
+            android:id="@+id/distance"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/colorPrimaryDarkPatronus"
+            android:tickMarkTint="@color/colorPrimaryDarkPatronus"
+            android:progressBackgroundTint="@color/colorPrimaryDarkPatronus"
+            android:max="4"
+            android:progress="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distance_txt" />
+
+        <TextView
+            android:id="@+id/distance_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Corta (1km)"
+            android:textColor="#fff"
+            app:layout_constraintRight_toRightOf="@+id/distance"
+            app:layout_constraintTop_toBottomOf="@+id/distance"
+            app:layout_constraintLeft_toLeftOf="@+id/distance"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id="@+id/distance_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Larga (5km)"
+            android:textColor="#fff"
+            app:layout_constraintRight_toRightOf="@+id/distance"
+            app:layout_constraintTop_toBottomOf="@+id/distance"
+            app:layout_constraintLeft_toLeftOf="@+id/distance"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id="@+id/additional_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="42dp"
+            android:text="Me siento seguro:"
+            android:textColor="@color/colorPrimaryPatrnous"
+            app:layout_constraintRight_toRightOf="@+id/input_passconfirm_reg"
+            app:layout_constraintTop_toBottomOf="@+id/distance"
+            app:layout_constraintLeft_toLeftOf="@+id/input_passconfirm_reg"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginLeft="8dp" />
+
+        <CheckBox
+            android:id="@+id/option_suburb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="6dp"
+            android:text="Al caminar por zonas residenciales"
+            android:textColor="#fff"
+            android:buttonTint="@color/colorPrimaryDarkPatronus"
+            android:backgroundTint="#fff"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintLeft_toLeftOf="@+id/additional_info"
+            app:layout_constraintRight_toRightOf="@+id/additional_info"
+            app:layout_constraintTop_toBottomOf="@+id/additional_info" />
+
+        <CheckBox
+            android:id="@+id/option_comercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Al caminar por zonas comerciales"
+            android:textColor="#fff"
+            android:buttonTint="@color/colorPrimaryDarkPatronus"
+            android:backgroundTint="#fff"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/option_suburb"
+            app:layout_constraintRight_toRightOf="@+id/option_suburb"
+            app:layout_constraintTop_toBottomOf="@+id/option_suburb" />
+
+        <CheckBox
+            android:id="@+id/option_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Al tener una acera para caminar"
+            android:textColor="#fff"
+            android:buttonTint="@color/colorPrimaryDarkPatronus"
+            android:backgroundTint="#fff"
+            app:layout_constraintLeft_toLeftOf="@+id/option_comercial"
+            app:layout_constraintRight_toRightOf="@+id/option_comercial"
+            app:layout_constraintTop_toBottomOf="@+id/option_comercial"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/option_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Al caminar por calles transitadas"
+            android:textColor="#fff"
+            android:buttonTint="@color/colorPrimaryDarkPatronus"
+            android:backgroundTint="#fff"
+            app:layout_constraintLeft_toLeftOf="@+id/option_street"
+            app:layout_constraintRight_toRightOf="@+id/option_street"
+            app:layout_constraintTop_toBottomOf="@+id/option_street"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/option_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Al ir en carro cuando se hace tarde"
+            android:textColor="#fff"
+            android:buttonTint="@color/colorPrimaryDarkPatronus"
+            android:backgroundTint="#fff"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/option_people"
+            app:layout_constraintRight_toRightOf="@+id/option_people"
+            app:layout_constraintTop_toBottomOf="@+id/option_people" />
+
+        <Button
+            android:id="@+id/btn_reg"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="@color/colorPrimaryDarkPatronus"
+            android:text="registrarse"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/option_car" />
 
     <Space
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/btn_reg"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/space" />
 
     </android.support.constraint.ConstraintLayout>
 
