@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimaryPatrnous">#2fa7ed</color>
     <color name="colorPrimaryDarkPatronus">#2f80ed</color>
-    <color name="colorAccentPatronus">#FFFFFF</color>
+    <color name="colorAccentPatronus">#2fa7ed</color>
     <color name="colorBarPatronus">#1C2335</color>
+    <color name="colorAlternativeRoute">#ff155d</color>
+    <color name="colorAlternativeRoute2">#00e991</color>
 </resources>

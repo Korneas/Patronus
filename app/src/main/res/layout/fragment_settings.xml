@@ -3,12 +3,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/settings_toolbar"
+        android:background="@color/colorPrimaryPatrnous">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp">
+
+            <TextView
+                android:id="@+id/toolbar_settings_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/settings_profile_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/settings_toolbar"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/add_image_btn" />
+
     <TextView
+        android:id="@+id/settings_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings fragment"
-        android:textSize="20dp"
+        android:layout_below="@+id/settings_profile_pic"
+        android:text="Name"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimaryPatrnous"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/settings_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_name"
+        android:layout_centerHorizontal="true"
+        android:text="Correo"
+        android:textColor="#000"/>
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:background="#ddd"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/log_out_txt"
+        android:layout_marginBottom="15dp"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/log_out_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logOut"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Quieres salir?" />
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorAlternativeRoute"
+        android:text="Cerrar Sesion"
+        android:textColor="#fff" />
 
 </RelativeLayout>

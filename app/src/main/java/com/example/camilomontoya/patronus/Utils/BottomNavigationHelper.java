@@ -2,10 +2,15 @@ package com.example.camilomontoya.patronus.Utils;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.camilomontoya.patronus.Friends.FriendsFragment;
+import com.example.camilomontoya.patronus.History.HistoryFragment;
+import com.example.camilomontoya.patronus.Map.MapFragment;
 import com.example.camilomontoya.patronus.R;
+import com.example.camilomontoya.patronus.Settings.SettingsFragment;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 /**
@@ -22,26 +27,4 @@ public class BottomNavigationHelper {
         bottomNavigation.enableShiftingMode(false);
         bottomNavigation.setTextVisibility(false);
     }
-
-    public static void enableNavigation(BottomNavigationViewEx bottomNavigation) {
-        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.ic_home:
-                        break;
-                    case R.id.ic_friends:
-                        break;
-                    case R.id.ic_history:
-                        break;
-                    case R.id.ic_settings:
-                        break;
-                }
-
-                return false;
-            }
-        });
-
-    }
-
 }

@@ -3,19 +3,31 @@ package com.example.camilomontoya.patronus.Utils;
 import java.util.ArrayList;
 
 /**
- * Created by Camilo Montoya on 11/14/2017.
+ * Created by Camilo Montoya on 11/22/2017.
  */
 
-public class User {
+public class CurrentUser {
 
-    private String name, email, residence, profile_pic;
+    public static CurrentUser ref;
+
+    private String name, email, residence, profilePic;
     private long distance;
     private boolean suburb, comercial, street, people, car;
     private ArrayList<User> friends;
 
-    public User(){}
+    private CurrentUser(){
 
-    public User(String name, String email, String residence, long distance, boolean suburb, boolean comercial, boolean street, boolean people, boolean car, ArrayList<User> friends, String profilePic) {
+    }
+
+    public static CurrentUser getRef(){
+        if(ref == null){
+            ref = new CurrentUser();
+        }
+        return ref;
+    }
+
+    public void setValues (String name, String email, String residence, long distance, boolean suburb, boolean comercial, boolean street,
+                           boolean people, boolean car, ArrayList friends, String profilePic) {
         this.name = name;
         this.email = email;
         this.residence = residence;
@@ -26,7 +38,7 @@ public class User {
         this.people = people;
         this.car = car;
         this.friends = friends;
-        this.profile_pic = profilePic;
+        this.profilePic = profilePic;
     }
 
     public String getName() {
@@ -110,10 +122,10 @@ public class User {
     }
 
     public String getProfilePic() {
-        return profile_pic;
+        return profilePic;
     }
 
     public void setProfilePic(String profilePic) {
-        this.profile_pic = profilePic;
+        this.profilePic = profilePic;
     }
 }

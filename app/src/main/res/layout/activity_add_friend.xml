@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.camilomontoya.patronus.Friends.AddFriendActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/add_friends_toolbar"
+        android:background="@color/colorPrimaryPatrnous">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp">
+
+            <ImageView
+                android:id="@+id/back_to_friends_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_arrow_left"
+                android:tint="#fff"/>
+
+            <TextView
+                android:id="@+id/toolbar_add_friends_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar amigos"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/search_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/add_friends_toolbar"
+        android:background="#ccc">
+
+        <ImageView
+            android:id="@+id/search_icon_label"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_search"
+            android:padding="15dp"
+            android:tint="@color/colorPrimaryDarkPatronus" />
+
+        <EditText
+            android:id="@+id/search_user"
+            android:layout_width="270dp"
+            android:layout_height="56dp"
+            android:background="#00000000"
+            android:backgroundTint="@color/colorPrimaryPatrnous"
+            android:hint="Buscar correo..."
+            android:imeOptions="actionSearch"
+            android:inputType="textWebEditText"
+            android:textColor="#000"
+            android:textColorHighlight="@color/colorPrimaryPatrnous"
+            android:layout_toRightOf="@+id/search_icon_label"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="IR"
+            android:textColor="#000"
+            android:background="#ddd"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_search_friend"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/friends_founded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_nav"/>
+
+</RelativeLayout>

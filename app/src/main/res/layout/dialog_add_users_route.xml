@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/select_friends_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryPatrnous">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar amigos"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/friends_to_go"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/select_friends_title"
+        android:layout_above="@+id/options_select_friends"/>
+
+    <RelativeLayout
+        android:id="@+id/options_select_friends"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/cancel_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_toLeftOf="@+id/start_trip"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:textColor="#999"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/start_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comenzar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimaryPatrnous"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

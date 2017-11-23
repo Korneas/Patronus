@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/friends_toolbar"
+        android:background="@color/colorPrimaryPatrnous">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp">
+
+            <TextView
+                android:id="@+id/toolbar_friends_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amigos"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/add_friends_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add_friends"
+                android:tint="#fff"/>
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/friends_recycler"
+        android:fadeScrollbars="true"
+        android:layout_below="@+id/friends_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/no_friends"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="Friends fragment"
-        android:textSize="20dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:textAlignment="center"
+        android:text="No tienes amigos agregados :c"
+        android:textSize="24dp"
+        android:textColor="@color/colorPrimaryPatrnous"/>
 
 </RelativeLayout>
