@@ -589,7 +589,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, android
                 } else {
                     polyOptions.color(getResources().getColor(COLORS[2]));
                     polyOptions.width(4);
-                    polyOptions.addAll(route.get(3).getPoints());
+                    polyOptions.addAll(route.get(2).getPoints());
                     Polyline polyline = map.addPolyline(polyOptions);
                     polylines.add(polyline);
                 }
